@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gilda';
+    src: url('../Gilda_Display/GildaDisplay-Regular.ttf') format('truetype');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Gilda';
+
+}
