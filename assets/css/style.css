@@ -304,8 +304,7 @@ nav .fa-bars {
   align-items: center;
   flex-direction: column;
   gap: 60px;
-  /* padding: 100px clamp(20px, 8.3vw, 120px); */
-    padding: clamp(48px, 7vw, 100px) clamp(20px, 8.3vw, 120px);
+  padding: clamp(48px, 7vw, 100px) clamp(20px, 8.3vw, 120px);
 }
 
 .reasons .reason-header {
@@ -349,11 +348,10 @@ nav .fa-bars {
 
 .reasons .reasons_list li {
   max-width: 381px;
-  padding: clamp(28px , 2.8vw ,40px) clamp(20px, 2.2vw ,32px);
+  padding: clamp(28px, 2.8vw, 40px) clamp(20px, 2.2vw, 32px);
   background-color: #ffffff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
   border-top: 4px solid #25a59e;
-
 }
 
 .reasons .reasons_list .card h3 {
@@ -396,8 +394,8 @@ nav .fa-bars {
   line-height: 100%;
   letter-spacing: 0%;
   color: #25a59e;
-  margin-top: clamp(40px , 5.5vw ,80px);
-  margin-bottom: clamp(32px , 2.4vw , 35px); 
+  margin-top: clamp(40px, 5.5vw, 80px);
+  margin-bottom: clamp(32px, 2.4vw, 35px);
 }
 
 .reasons .reasons_list .card a .fa-arrow-right-long {
@@ -408,7 +406,111 @@ nav .fa-bars {
 
 .reasons .reasons_list .special a {
   color: white;
-} 
+}
+
+/* ================= Section 3 ================= */
+
+.discover {
+  width: 100%;
+  min-height: 685px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
+  padding: clamp(48px, 7vw, 100px) clamp(20px, 8.3vw, 120px);
+}
+
+.discover .discover-header {
+  width: 100%;
+  max-width: 534px;
+}
+
+.discover .discover-header h2 {
+  width: 100%;
+  opacity: 1;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.17;
+  letter-spacing: 0%;
+  margin-bottom: clamp(12px, 1.9vw, 28px);
+}
+
+.discover .discover-header h2 span {
+  color: #25a59e;
+  -webkit-text-stroke: 0.2px #262626;
+}
+
+.discover .discover-header p {
+  width: 100%;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0%;
+  color: #595959;
+}
+
+.discover .discover-header p span {
+  font-family: inherit;
+  color: #25a59e;
+}
+
+.discover .discover-header .more {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.discover .discover-header .more button {
+  border: none;
+  background-color: #25a59e;
+  padding: 16px 32px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+}
+.discover .discover-header .more a {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #333333cc;
+  border-bottom: 1px solid #333333cc;
+}
+
+.discover .images {
+  min-width: 335px;
+  max-width: 640px;
+  position: relative;
+  flex: 1;
+}
+
+.discover .images .people {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.discover .images .shape {
+  width: 84%;
+  height: auto;
+  position: absolute;
+  opacity: 0.7;
+  bottom: 0px;
+  left: 13%;
+}
+
+/* ================= Sectio 4 ================= */
 
 /* ================= RESPONSIVE ================= */
 
@@ -523,14 +625,18 @@ nav .fa-bars {
     background-color: #25a59e;
   }
 
+  .reasons {
+    padding-inline: clamp(20px, 8.3vw, 120px);
+  }
+
   .reasons .reason-header p {
     font-size: 16px;
     line-height: 24px;
   }
   .reasons .reasons_list {
-        flex-direction: column;
+    flex-direction: column;
   }
-  .reasons .reasons_list .card h3{
+  .reasons .reasons_list .card h3 {
     font-size: 28px;
     line-height: 40px;
   }
@@ -538,5 +644,26 @@ nav .fa-bars {
     font-size: 15px;
     line-height: 23px;
   }
-  
+
+  .discover .discover-header .more {
+    display: none;
+  }
+
+  .discover {
+    flex-direction: column;
+    min-height: auto;
+    padding-inline: 20px;
+  }
+
+  .discover .images {
+    flex: none;
+    width: 100%;
+  }
+
+  .discover .images .people {
+    width: 100%;
+  }
+  .discover .discover-header p {
+    font-size: 16px;
+  }
 }
