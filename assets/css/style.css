@@ -890,33 +890,39 @@ footer .divider {
     padding-top: 32px;
   }
 
-  footer {
-    padding-inline: 20px;
-  }
-  footer .offers {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+footer .offers {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 20px;
+}
 
-  footer .offers h2 {
-    font-size: 40px;
-    line-height: 52px;
-  }
+footer .offers h2 {
+  font-size: 40px;
+  line-height: 52px;
+}
 
-  .links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.links {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 20px;
+}
 
-  .links-side {
-    width: 100%;
-    align-items: flex-end;
-  }
+.links-side {
+  width: 100%;
+  align-items: flex-end;
+}
 
-  .lists ul {
-    flex-wrap: nowrap;
-    gap: 12px 27px;
-    font-size: 16px;
-    line-height: 26px;
-  }
+.lists {
+  width: 100%;
+}
+
+.lists ul {
+  width: 100%;
+  justify-content: space-between;   
+  gap: 8px;                        
+  flex-wrap: wrap;                   
+  row-gap: 8px;
+  height: auto;
+  min-height: 40px;                  
+}
 }
