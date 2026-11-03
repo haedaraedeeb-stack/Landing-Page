@@ -17,7 +17,7 @@ header {
   padding-bottom: calc(380px + 15.6vh);
 }
 
-nav {
+header nav {
   min-height: 33px;
   max-height: 60px;
   display: flex;
@@ -26,7 +26,7 @@ nav {
   padding: 5.5vw;
 }
 
-nav h1 {
+header nav h1 {
   width: 91px;
   height: 33px;
   font-size: 28px;
@@ -36,10 +36,10 @@ nav h1 {
   color: #25a59e;
 }
 
-nav .bar {
+header nav .bar {
   display: block;
 }
-nav .fa-bars {
+header nav .fa-bars {
   display: none;
 }
 
@@ -354,6 +354,21 @@ nav .fa-bars {
   border-top: 4px solid #25a59e;
 }
 
+.reasons .reasons_list li:hover {
+  border-top: 4px solid #ffffff;
+  background-color: #25a59e;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.reasons .reasons_list li:hover h3,
+.reasons .reasons_list li:hover p,
+.reasons .reasons_list li:hover a {
+  color: white;
+  transition: color 0.3s;
+}
+
 .reasons .reasons_list .card h3 {
   font-weight: 400;
   font-size: 40px;
@@ -537,7 +552,7 @@ nav .fa-bars {
   position: relative;
 }
 
-.video > img  {
+.video > img {
   display: block;
   width: 100%;
   min-height: 220px;
@@ -559,7 +574,158 @@ nav .fa-bars {
   height: auto;
 }
 
+/* ================= Footer ================= */
 
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.offers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding-inline: clamp(20px, 8.3vw, 120px);
+}
+
+.offers h2 {
+  border-width: 0.2px;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.17;
+  letter-spacing: 0%;
+  color: rgba(38, 38, 38, 1);
+}
+
+.offers a {
+  /* width: 147px; */
+  white-space: nowrap;
+  padding: 16px 32px;
+  background: rgba(37, 165, 158, 1);
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer .divider {
+  width: 100%;
+  border-width: 1px;
+  border: 1px solid rgba(217, 217, 217, 1);
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 80px;
+  padding-right: clamp(20px, 8.3vw, 120px);
+  padding-left: clamp(20px, 8.3vw, 120px);
+  padding-bottom: clamp(40px, 7vw, 100px);
+}
+
+.links .contact {
+  width: 100%;
+  max-width: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.links .contact p {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: rgba(89, 89, 89, 1);
+}
+
+.links .contact .brand {
+  font-family: "Gilda";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  color: rgba(37, 165, 158, 1);
+}
+
+.links .contact .social {
+  display: flex;
+  gap: 32px;
+}
+
+.links .contact .social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(234, 250, 249, 1);
+  backdrop-filter: blur(9px);
+}
+
+.links .contact .social a img {
+  width: 22px;
+  height: auto;
+}
+
+.links-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.back-to-top {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #8c8c8c;
+  box-shadow: 0 4px 26px rgba(66, 62, 58, 0.35);
+}
+
+.back-to-top img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* .lists {
+  padding-top: 0;
+} */
+
+.lists ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  gap: clamp(27px, 4.17vw, 60px);
+}
+
+.lists a {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.17;
+  color: #595959;
+  text-decoration: none;
+  white-space: nowrap;
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
@@ -567,15 +733,15 @@ nav .fa-bars {
     padding-bottom: 380px;
   }
 
-  nav h1 {
+  header nav h1 {
     margin-top: 20px;
     font-size: 16px;
   }
 
-  nav .bar {
+  header nav .bar {
     display: none;
   }
-  nav .fa-bars {
+  header nav .fa-bars {
     width: 24px;
     height: 24px;
     display: block;
@@ -716,11 +882,41 @@ nav .fa-bars {
   }
 
   .documentaion h2 {
-      padding: 0px 20px;
-      margin-top: 24px;
+    padding: 0px 20px;
+    margin-top: 24px;
   }
 
   .documentaion {
     padding-top: 32px;
+  }
+
+  footer {
+    padding-inline: 20px;
+  }
+  footer .offers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .offers h2 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links-side {
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .lists ul {
+    flex-wrap: nowrap;
+    gap: 12px 27px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
