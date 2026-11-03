@@ -512,6 +512,54 @@ nav .fa-bars {
 
 /* ================= Sectio 4 ================= */
 
+.documentaion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: clamp(48px, 7vw, 100px);
+  padding-bottom: clamp(48px, 7vw, 100px);
+  gap: 48px;
+}
+.documentaion h2 {
+  max-width: 680px;
+  border-width: 0.2px;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.17;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #262626;
+}
+
+.video {
+  width: 100%;
+  position: relative;
+}
+
+.video > img  {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  max-width: 100%;
+  height: auto;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(60px, 9.1vw, 131px);
+}
+
+.play-btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
@@ -665,5 +713,14 @@ nav .fa-bars {
   }
   .discover .discover-header p {
     font-size: 16px;
+  }
+
+  .documentaion h2 {
+      padding: 0px 20px;
+      margin-top: 24px;
+  }
+
+  .documentaion {
+    padding-top: 32px;
   }
 }
